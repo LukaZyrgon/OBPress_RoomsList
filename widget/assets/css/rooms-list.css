@@ -1,0 +1,220 @@
+.rooms {
+  margin-bottom: 50px;
+}
+
+.rooms-per-hotel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: -27px;
+}
+
+.rooms_header_message {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  color: #000000;
+}
+
+.hotel_name {
+  width: 100%;
+  margin-left: 27px;
+  margin-bottom: 0px;
+  margin-top: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.room-card {
+  display: flex;
+  position: relative;
+  margin: 29px 27px;
+  width: 592px;
+  box-shadow: 0px 3px 15px #00000029;
+}
+
+.MaxPartialPaymentParcel {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  font-size: 12px;
+  line-height: 15px;
+  color: #ffffff;
+  padding: 5px 9.5px 6.36px 8px;
+  background-color: #000000;
+}
+
+.MaxPartialPaymentParcel span {
+  font-weight: bold;
+}
+
+.room-card-img {
+  width: 174px;
+  height: 325px!important;
+  object-fit: cover;
+}
+
+.room-card-body {
+  background-color: #ffffff;
+  padding: 18.8px 27.7px 21.83px 23.11px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.room-card-body-top {
+  padding-bottom: 17.48px;
+  border-bottom: 1px solid #E6E6E6;
+}
+
+.room-card-body-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.room-card-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000000;
+  line-height: 24px;
+  margin-bottom: 11.5px;
+  display: block;
+}
+
+.room-card-hotel-name {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 18px;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.room-card-hotel-address {
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000;
+}
+
+.room-card-text-desktop {
+  margin-top: 17.48px;
+  margin-bottom: 17.48px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #2C2F33;
+}
+
+.room-card-text-mobile {
+  display: none;
+}
+
+
+.price-and-button-holder {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.price_holder {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-text {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 5px;
+}
+
+.price {
+  color: #BEAD8E;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+.price .currency_symbol_price, .price .decimal_value_price {
+  font-size: 20px;
+}
+
+.room-button {
+  background-color: #000000;
+  padding: 11px 33px;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.room-card-best-price {
+  position: absolute;
+  top: 13px;
+  left: -13px;
+}
+
+
+.ribbon {
+  font-size: 20px;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  margin: 0px;
+}
+.text {
+  display: inline-block;
+  padding: 10px 26px;
+  background: #82B789;
+  position: relative;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;  
+  box-shadow: 0px 0px 20px #0000004F;  
+}
+
+.ribbon:before,
+.text:before,
+.text:after
+{
+  content: "";
+  position: absolute;
+}
+.ribbon:before {
+  top: 0.3em;
+  left: 0.2em;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: #ebeced;
+  z-index: -2;
+}
+.text:before {
+  bottom: 100%;
+  left: 0;
+  border-top: 7px solid #537E59;
+  border-left: 13px solid transparent;
+  bottom: -7px;
+}
+.text:after {
+  top: 100%;
+  right: 0;
+  border-width: 0.5em 2em 0 0;
+  border-color: #fc9544 transparent transparent transparent;
+}
+
+/* MOBILE */
+@media(max-width: 1279px) {
+
+  .rooms-per-hotel {
+    flex-direction: column;
+    align-items: center;
+    margin: 0px;
+  }
+
+  .hotel_name {
+    width: unset;
+  }
+}
