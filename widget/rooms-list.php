@@ -28,7 +28,7 @@ class RoomsList extends \Elementor\Widget_Base
 
 	public function get_title()
 	{
-		return __('Rooms List', 'plugin-name');
+		return __('Rooms List', 'OBPress_RoomsList');
 	}
 
 	public function get_icon()
@@ -43,7 +43,15 @@ class RoomsList extends \Elementor\Widget_Base
 	
 	protected function _register_controls()
 	{
+        $this->start_controls_section(
+			'color_section',
+			[
+				'label' => __('Package Main Image Style', 'OBPress_RoomsList'),
+				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+			]
+		);
 
+        $this->end_controls_section();
 	}
 
 	protected function render()

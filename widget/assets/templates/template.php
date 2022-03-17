@@ -1,6 +1,6 @@
 <div class="rooms">
     <?php if($rooms != null): ?>
-        <div class="rooms_header_message">Conheça <?= count($hotels_in_chain) ?> hotéis da rede Hilton ao redor do mundo!</div>
+        <div class="rooms_header_message"><?php _e('Discover', 'OBPress_RoomsList') ?> <?= count($hotels_in_chain) ?> <?php _e('Hilton hotels around the world!', 'OBPress_RoomsList') ?></div> 
         <?php foreach($rooms as $key => $rooms_per_hotel): ?>
             <div class="rooms-per-hotel">
                 <?php foreach($rooms_per_hotel as $room): ?>
@@ -14,14 +14,14 @@
                         <?php if ($key === key($rooms_per_hotel)): ?>
                             <div class="room-card-best-price">
                                 <p class="ribbon">
-                                    <span class="text">Menor preço</span>
+                                    <span class="text"><?php _e('Lowest price', 'OBPress_RoomsList') ?></span>
                                 </p>
                             </div>
                         <?php endif; ?>
 
                         <?php if(@$hotels_in_chain[$key]["MaxPartialPaymentParcel"] != null): ?>
                             <div class="MaxPartialPaymentParcel" data-toggle="modal" data-target="#partial-modal-payment">
-                                Pay up to <span><?= @$hotels_in_chain[$key]["MaxPartialPaymentParcel"] ?>x</span>
+                                <?php _e('Pay up to', 'OBPress_RoomsList') ?> <span><?= @$hotels_in_chain[$key]["MaxPartialPaymentParcel"] ?>x</span>
                             </div>
                         <?php endif; ?>
 
@@ -46,11 +46,10 @@
 
                                 <div class="price-and-button-holder">
                                     <div class="price_holder">
-                                        <span class="price-text">A partir de</span> 
+                                        <span class="price-text"><?php _e('From', 'OBPress_RoomsList') ?></span> 
                                         <span class="price"><?= Lang_Curr_Functions::ValueAndCurrencyCultureV4(100, $currencies, $currency, $language) ?></span>
                                     </div>
-                                    <a href="<?="/room/?room_id=".$room->ID ?>" class="room-button">Saber mais
-                                    </a>
+                                    <a href="<?="/room/?room_id=".$room->ID ?>" class="room-button"><?php _e('See more', 'OBPress_RoomsList') ?></a>
                                 </div>
                             </div>
                         </div>
@@ -59,6 +58,6 @@
             </div>
         <?php endforeach; ?>
     <?php else: ?>
-        <h1>No rooms available</h1>
+        <h1><?php _e('No rooms available', 'OBPress_RoomsList') ?></h1>
     <?php endif; ?>
 </div>
