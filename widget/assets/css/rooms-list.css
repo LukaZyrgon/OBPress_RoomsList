@@ -150,6 +150,10 @@
   line-height: 18px;
 }
 
+.room-button:hover {
+  color: #ffffff;
+}
+
 .room-card-best-price {
   position: absolute;
   top: 13px;
