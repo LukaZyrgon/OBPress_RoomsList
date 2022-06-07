@@ -2,14 +2,17 @@
     <?php if($rooms != null): ?>
         <div class="rooms_header_message"><?php _e('Discover', 'OBPress_RoomsList') ?> <?= count($hotels_in_chain) ?> <?php _e('Hilton hotels around the world!', 'OBPress_RoomsList') ?></div> 
         <?php foreach($rooms as $key => $rooms_per_hotel): ?>
-            <div class="rooms-per-hotel">
+            <?php 
+                $roomId = $key;
+            ?>
+            <div class="rooms-per-hotel <?= $settings_so['package_order_direction_select']; ?>">
                 <?php foreach($rooms_per_hotel as $room): ?>
                     <p class="hotel_name"><?= @$hotels_in_chain[$key]["HotelName"] ?></p>
                     <?php break; ?>
                 <?php endforeach; ?>
 
                 <?php foreach($rooms_per_hotel as $key => $room): ?>
-                    <div class="room-card">
+                    <div class="room-card <?= $settings_so['package_rooms_cards_direction']; ?>">
 
                         <?php if ($key === key($rooms_per_hotel)): ?>
                             <div class="room-card-best-price">
@@ -19,9 +22,9 @@
                             </div>
                         <?php endif; ?>
 
-                        <?php if(@$hotels_in_chain[$key]["MaxPartialPaymentParcel"] != null): ?>
+                        <?php if(@$hotels_in_chain[$roomId]["MaxPartialPaymentParcel"] != null): ?>
                             <div class="MaxPartialPaymentParcel" data-toggle="modal" data-target="#partial-modal-payment">
-                                <?php _e('Pay up to', 'OBPress_RoomsList') ?> <span><?= @$hotels_in_chain[$key]["MaxPartialPaymentParcel"] ?>x</span>
+                                <?php _e('Pay up to', 'OBPress_RoomsList') ?> <span><?= @$hotels_in_chain[$roomId]["MaxPartialPaymentParcel"] ?>x</span>
                             </div>
                         <?php endif; ?>
 
@@ -35,9 +38,13 @@
                             <div class="room-card-body-top"> 
                                 <a href="/chain/<?=$chain?>/room/<?=$room->ID ?>" class="room-card-title card-title-desktop"><?= substr($room->DescriptiveText, 0, 80) ?>
                                 </a>
-                                <div class="room-card-hotel-name"><?= @$hotels_in_chain[$key]["HotelName"] ?></div>
+                                <?php if(@$hotels_in_chain[$roomId]["HotelName"] != null) : ?>
+                                    <div class="room-card-hotel-name"><?= @$hotels_in_chain[$roomId]["HotelName"] ?></div>
+                                <?php endif; ?>
 
-                                <div class="room-card-hotel-address"><?= @$hotels_in_chain[$key]["AddressLine"] ?></div>
+                                <?php if(@$hotels_in_chain[$roomId]["AddressLine"] != null) : ?>
+                                    <div class="room-card-hotel-address"><?= @$hotels_in_chain[$roomId]["AddressLine"] ?></div>
+                                <?php endif; ?>
                             </div>
 
                             <div class="room-card-body-bottom">
