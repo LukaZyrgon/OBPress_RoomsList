@@ -36,7 +36,7 @@
 
                         <div class="room-card-body">
                             <div class="room-card-body-top"> 
-                                <a href="/chain/<?=$chain?>/room/<?=$room->ID ?>" class="room-card-title card-title-desktop"><?= substr($room->DescriptiveText, 0, 80) ?>
+                                <a href="<?="/room/?room_id=".$room->ID ?>" class="room-card-title card-title-desktop"><?= substr($room->DescriptiveText, 0, 80) ?>
                                 </a>
                                 <?php if(@$hotels_in_chain[$roomId]["HotelName"] != null) : ?>
                                     <div class="room-card-hotel-name"><?= @$hotels_in_chain[$roomId]["HotelName"] ?></div>
