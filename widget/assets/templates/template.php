@@ -12,6 +12,17 @@
                 <?php endforeach; ?>
 
                 <?php foreach($rooms_per_hotel as $key => $room): ?>
+                    <?php 
+                        $description = $room->MultimediaDescriptionsType->MultimediaDescriptions[0]->TextItemsType->TextItems[0]->Description;
+                        if(strstr($description, '<br/>')) {
+                            if(strstr($description, '<br/><br/>')) {
+                                $descriptionWithoutDoubleBr = str_replace('<br/><br/>', ': ', $description);
+                            } 
+                            $descriptionWithoutBr = str_replace('<br/>', ' ', $descriptionWithoutDoubleBr);
+                        } else {
+                            $descriptionWithoutBr = $description;
+                        }
+                    ?>
                     <div class="room-card <?= $settings_so['package_rooms_cards_direction']; ?>">
 
                         <?php if ($key === key($rooms_per_hotel)): ?>
@@ -48,9 +59,16 @@
                             </div>
 
                             <div class="room-card-body-bottom">
-                                <p class="room-card-text-desktop"><?= substr($room->MultimediaDescriptionsType->MultimediaDescriptions[0]->TextItemsType->TextItems[0]->Description, 0, 140) . "..." ?></p>
-                                <p class="room-card-text-mobile"><?= substr($room->MultimediaDescriptionsType->MultimediaDescriptions[0]->TextItemsType->TextItems[0]->Description, 0, 60) . "..." ?></p>
-
+                                <?php if(strlen($descriptionWithoutBr) > 140) : ?>
+                                    <p class="room-card-text-desktop"><?= substr($descriptionWithoutBr, 0, 140) . "..." ?></p>
+                                <?php else : ?>
+                                    <p class="room-card-text-desktop"><?= $descriptionWithoutBr; ?></p>
+                                <?php endif; ?>
+                                <?php if(strlen($descriptionWithoutBr > 60)) : ?>
+                                    <p class="room-card-text-mobile"><?= substr($descriptionWithoutBr, 0, 60) . "..." ?></p>
+                                <?php else : ?>
+                                    <p class="room-card-text-mobile"><?= $descriptionWithoutBr; ?></p>
+                                <?php endif; ?>
                                 <div class="price-and-button-holder">
                                     <div class="price_holder">
                                         <span class="price-text"><?php _e('From', 'OBPress_RoomsList') ?></span> 
