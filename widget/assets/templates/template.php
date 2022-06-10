@@ -1,5 +1,11 @@
 <div class="rooms">
     <?php if($rooms != null): ?>
+        <div class="search-and-order">
+            <input type="text" id="search-input" placeholder="Search by keyword, hotel or destination" class="btn-ic">
+            <button class="obpress-chain-results-button order-button obpress-secundary-btn" data-bs-toggle="modal" data-bs-target="#ordenar">
+                <?php _e('Order', 'OBPressTheme') ?>
+            </button>
+        </div>
         <div class="rooms_header_message"><?php _e('Discover', 'OBPress_RoomsList') ?> <?= count($hotels_in_chain) ?> <?php _e('Hilton hotels around the world!', 'OBPress_RoomsList') ?></div> 
         <?php foreach($rooms as $key => $rooms_per_hotel): ?>
             <?php 
@@ -12,6 +18,17 @@
                 <?php endforeach; ?>
 
                 <?php foreach($rooms_per_hotel as $key => $room): ?>
+                    <?php 
+                        $description = $room->MultimediaDescriptionsType->MultimediaDescriptions[0]->TextItemsType->TextItems[0]->Description;
+                        if(strstr($description, '<br/>')) {
+                            if(strstr($description, '<br/><br/>')) {
+                                $descriptionWithoutDoubleBr = str_replace('<br/><br/>', ': ', $description);
+                            } 
+                            $descriptionWithoutBr = str_replace('<br/>', ' ', $descriptionWithoutDoubleBr);
+                        } else {
+                            $descriptionWithoutBr = $description;
+                        }
+                    ?>
                     <div class="room-card <?= $settings_so['package_rooms_cards_direction']; ?>">
 
                         <?php if ($key === key($rooms_per_hotel)): ?>
@@ -46,11 +63,19 @@
                                     <div class="room-card-hotel-address"><?= @$hotels_in_chain[$roomId]["AddressLine"] ?></div>
                                 <?php endif; ?>
                             </div>
-
-                            <div class="room-card-body-bottom">
-                                <p class="room-card-text-desktop"><?= substr($room->MultimediaDescriptionsType->MultimediaDescriptions[0]->TextItemsType->TextItems[0]->Description, 0, 140) . "..." ?></p>
-                                <p class="room-card-text-mobile"><?= substr($room->MultimediaDescriptionsType->MultimediaDescriptions[0]->TextItemsType->TextItems[0]->Description, 0, 60) . "..." ?></p>
-
+                            <div class="room-card-body-bottom <?php if($descriptionWithoutBr == null) echo 'empty'; ?>">
+                                <?php if($descriptionWithoutBr != null) : ?>
+                                    <?php if(strlen($descriptionWithoutBr) > 140) : ?>
+                                        <p class="room-card-text-desktop"><?= substr($descriptionWithoutBr, 0, 140) . "..." ?></p>
+                                    <?php else : ?>
+                                        <p class="room-card-text-desktop"><?= $descriptionWithoutBr; ?></p>
+                                    <?php endif; ?>
+                                    <?php if(strlen($descriptionWithoutBr) > 120) : ?>
+                                        <p class="room-card-text-mobile"><?= substr($descriptionWithoutBr, 0, 120) . "..." ?></p>
+                                    <?php else : ?>
+                                        <p class="room-card-text-mobile"><?= $descriptionWithoutBr; ?></p>
+                                    <?php endif; ?>
+                                <?php endif; ?>
                                 <div class="price-and-button-holder">
                                     <div class="price_holder">
                                         <span class="price-text"><?php _e('From', 'OBPress_RoomsList') ?></span> 
@@ -67,4 +92,48 @@
     <?php else: ?>
         <h1><?php _e('No rooms available', 'OBPress_RoomsList') ?></h1>
     <?php endif; ?>
+</div>
+
+<div class="modal hide" id="ordenar" tabindex="-1" aria-modal="true" role="dialog">
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+          <p class="title">Order by:</p>
+
+            <div class="close-modal" data-bs-dismiss="modal"> </div>
+
+            <form class="order">
+
+                <div>
+                    <label for="most" id="folder" class="checked"> <span><span>✓</span></span>By folder (default)</label>
+                </div>
+
+                <div>
+                    <label for="least" id="date" class=""> <span><span>✓</span></span>By date</label>
+                </div>
+
+                 <div>
+                    <label for="least" id="price" class=""> <span><span>✓</span></span>By price</label>
+                </div>
+
+            </form>
+
+
+            <div class="modal-bottom">
+                <span class="obpress-primary-link" data-bs-dismiss="modal">Clear</span>
+                <div class="order-hotels obpress-primary-btn">Submit</div>
+            </div> 
+
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="no-rooms">
+    <img src="http://bev.test/icons/not_found.svg" alt="No results found" class="no-results-img">           
+    <p class="no-results-text">No results found</p>
 </div>
