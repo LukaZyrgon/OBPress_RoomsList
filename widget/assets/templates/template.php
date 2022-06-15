@@ -100,30 +100,30 @@
 
         <div class="modal-content">
 
-          <p class="title">Order by:</p>
+          <p class="title"><?php _e('Order by:', 'OBPress_RoomsList') ?></p>
 
             <div class="close-modal" data-bs-dismiss="modal"> </div>
 
             <form class="order">
 
                 <div>
-                    <label for="most" id="folder" class="checked"> <span><span>✓</span></span>By folder (default)</label>
+                    <label for="most" id="folder" class="checked"> <span><span>✓</span></span><?php _e('By folder (default)', 'OBPress_RoomsList') ?></label>
                 </div>
 
                 <div>
-                    <label for="least" id="date" class=""> <span><span>✓</span></span>By date</label>
+                    <label for="least" id="date" class=""> <span><span>✓</span></span><?php _e('By date', 'OBPress_RoomsList') ?></label>
                 </div>
 
                  <div>
-                    <label for="least" id="price" class=""> <span><span>✓</span></span>By price</label>
+                    <label for="least" id="price" class=""> <span><span>✓</span></span><?php _e('By price', 'OBPress_RoomsList') ?></label>
                 </div>
 
             </form>
 
 
             <div class="modal-bottom">
-                <span class="obpress-primary-link" data-bs-dismiss="modal">Clear</span>
-                <div class="order-hotels obpress-primary-btn">Submit</div>
+                <span class="obpress-primary-link" data-bs-dismiss="modal"><?php _e('Clear', 'OBPress_RoomsList') ?></span>
+                <div class="order-hotels obpress-primary-btn"><?php _e('Submit', 'OBPress_RoomsList') ?></div>
             </div> 
 
 
@@ -135,5 +135,5 @@
 
 <div class="no-rooms">
     <img src="http://bev.test/icons/not_found.svg" alt="No results found" class="no-results-img">           
-    <p class="no-results-text">No results found</p>
+    <p class="no-results-text"><?php _e('No results found', 'OBPress_RoomsList') ?></p>
 </div>
