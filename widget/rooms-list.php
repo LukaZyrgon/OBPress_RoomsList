@@ -63,12 +63,16 @@ class RoomsList extends \Elementor\Widget_Base
 			]
 		);
 
-        $this->add_control(
+        $this->add_responsive_control(
 			'package_room_width',
 			[
 				'label' => __( 'Room Width', 'OBPress_RoomsList' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'size' => 100,
+				],
+				'mobile_default' => [
 					'size' => 100,
 				],
 				'range' => [
@@ -127,12 +131,20 @@ class RoomsList extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'package_main_title_margin',
 			[
 				'label' => __( 'Main Title Margin', 'OBPress_RoomsList' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '20',
+					'right' => '0',
+					'bottom' => '25',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '20',
 					'right' => '0',
 					'bottom' => '25',
@@ -185,12 +197,20 @@ class RoomsList extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'package_hotel_name_margin',
 			[
 				'label' => __( 'Hotel Name Margin', 'OBPress_RoomsList' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '50',
+					'right' => '0',
+					'bottom' => '0',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '50',
 					'right' => '0',
 					'bottom' => '0',
@@ -214,12 +234,20 @@ class RoomsList extends \Elementor\Widget_Base
 			]
 		);
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'package_cards_margin',
 			[
 				'label' => __( 'Cards Margin', 'OBPress_RoomsList' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '29',
+					'right' => '0',
+					'bottom' => '29',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '29',
 					'right' => '0',
 					'bottom' => '29',
@@ -267,12 +295,16 @@ class RoomsList extends \Elementor\Widget_Base
 			]
 		);
 
-        $this->add_control(
+        $this->add_responsive_control(
 			'package_room_cards_image_height',
 			[
 				'label' => __( 'Image Height', 'OBPress_RoomsList' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'size' => 248,
+				],
+				'mobile_default' => [
 					'size' => 248,
 				],
 				'range' => [
@@ -292,12 +324,16 @@ class RoomsList extends \Elementor\Widget_Base
 			]
 		);
 
-        $this->add_control(
+        $this->add_responsive_control(
 			'package_room_cards_info_height',
 			[
 				'label' => __( 'Cards Info Height', 'OBPress_RoomsList' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'size' => 248,
+				],
+				'mobile_default' => [
 					'size' => 248,
 				],
 				'range' => [
@@ -353,12 +389,20 @@ class RoomsList extends \Elementor\Widget_Base
 			]
 		);
 
-        $this->add_control(
+        $this->add_responsive_control(
 			'package_cards_ribbon_padding',
 			[
 				'label' => __( 'Ribbon Padding', 'OBPress_RoomsList' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '10',
+					'right' => '26',
+					'bottom' => '10',
+					'left' => '26',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '10',
 					'right' => '26',
 					'bottom' => '10',
@@ -463,12 +507,20 @@ class RoomsList extends \Elementor\Widget_Base
 			]
 		);
 
-        $this->add_control(
+        $this->add_responsive_control(
 			'package_cards_pay_up_to_padding',
 			[
 				'label' => __( 'Pay Up To Padding', 'OBPress_RoomsList' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '5',
+					'right' => '10',
+					'bottom' => '6',
+					'left' => '8',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '5',
 					'right' => '10',
 					'bottom' => '6',
@@ -505,12 +557,20 @@ class RoomsList extends \Elementor\Widget_Base
 			]
 		);
 
-        $this->add_control(
+        $this->add_responsive_control(
 			'package_cards_info_padding',
 			[
 				'label' => __( 'Padding', 'OBPress_RoomsList' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '19',
+					'right' => '27',
+					'bottom' => '22',
+					'left' => '23',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '19',
 					'right' => '27',
 					'bottom' => '22',
@@ -569,12 +629,20 @@ class RoomsList extends \Elementor\Widget_Base
 			]
 		);
 
-        $this->add_control(
+        $this->add_responsive_control(
 			'package_cards_info_room_name_margin',
 			[
 				'label' => __( 'Room Name Margin', 'OBPress_RoomsList' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '0',
+					'right' => '0',
+					'bottom' => '12',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '0',
 					'right' => '0',
 					'bottom' => '12',
@@ -593,6 +661,7 @@ class RoomsList extends \Elementor\Widget_Base
 			[
 				'label' => __( 'Room Name Alignment', 'OBPress_RoomsList' ),
 				'type' => \Elementor\Controls_Manager::CHOOSE,
+				'devices' => [ 'desktop', 'mobile' ],
 				'options' => [
 					'left' => [
 						'title' => __( 'Left', 'OBPress_RoomsList' ),
@@ -607,7 +676,8 @@ class RoomsList extends \Elementor\Widget_Base
 						'icon' => 'eicon-text-align-right',
 					],
 				],
-				'default' => 'left',
+				'desktop_default' => 'left',
+				'mobile_default' => 'left',
 				'selectors' => [
 					'.rooms .room-card-title' => 'text-align: {{VALUE}}',
 				],
@@ -659,12 +729,20 @@ class RoomsList extends \Elementor\Widget_Base
 			]
 		);
 
-        $this->add_control(
+        $this->add_responsive_control(
 			'package_cards_info_hotel_name_margin',
 			[
 				'label' => __( 'Hotel Name Margin', 'OBPress_RoomsList' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '0',
+					'right' => '0',
+					'bottom' => '12',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '0',
 					'right' => '0',
 					'bottom' => '12',
@@ -683,6 +761,7 @@ class RoomsList extends \Elementor\Widget_Base
 			[
 				'label' => __( 'Hotel Name Alignment', 'OBPress_RoomsList' ),
 				'type' => \Elementor\Controls_Manager::CHOOSE,
+				'devices' => [ 'desktop', 'mobile' ],
 				'options' => [
 					'left' => [
 						'title' => __( 'Left', 'OBPress_RoomsList' ),
@@ -697,7 +776,8 @@ class RoomsList extends \Elementor\Widget_Base
 						'icon' => 'eicon-text-align-right',
 					],
 				],
-				'default' => 'left',
+				'desktop_default' => 'left',
+				'mobile_default' => 'left',
 				'selectors' => [
 					'.rooms .room-card-hotel-name' => 'text-align: {{VALUE}}',
 				],
@@ -754,6 +834,7 @@ class RoomsList extends \Elementor\Widget_Base
 			[
 				'label' => __( 'Address Alignment', 'OBPress_RoomsList' ),
 				'type' => \Elementor\Controls_Manager::CHOOSE,
+				'devices' => [ 'desktop', 'mobile' ],
 				'options' => [
 					'left' => [
 						'title' => __( 'Left', 'OBPress_RoomsList' ),
@@ -768,7 +849,8 @@ class RoomsList extends \Elementor\Widget_Base
 						'icon' => 'eicon-text-align-right',
 					],
 				],
-				'default' => 'left',
+				'desktop_default' => 'left',
+				'mobile_default' => 'left',
 				'selectors' => [
 					'.rooms .room-card-hotel-address' => 'text-align: {{VALUE}}',
 				],
@@ -802,12 +884,20 @@ class RoomsList extends \Elementor\Widget_Base
 		);
 
         
-        $this->add_control(
+        $this->add_responsive_control(
 			'package_cards_info_divide_padding',
 			[
 				'label' => __( 'Divider Padding', 'OBPress_RoomsList' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '0',
+					'right' => '0',
+					'bottom' => '18',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '0',
 					'right' => '0',
 					'bottom' => '18',
@@ -866,12 +956,20 @@ class RoomsList extends \Elementor\Widget_Base
 			]
 		);
 
-        $this->add_control(
+        $this->add_responsive_control(
 			'package_cards_info_description_margin',
 			[
 				'label' => __( 'Description Margin', 'OBPress_RoomsList' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '18',
+					'right' => '0',
+					'bottom' => '18',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '18',
 					'right' => '0',
 					'bottom' => '18',
@@ -890,6 +988,7 @@ class RoomsList extends \Elementor\Widget_Base
 			[
 				'label' => __( 'Description Alignment', 'OBPress_RoomsList' ),
 				'type' => \Elementor\Controls_Manager::CHOOSE,
+				'devices' => [ 'desktop', 'mobile' ],
 				'options' => [
 					'left' => [
 						'title' => __( 'Left', 'OBPress_RoomsList' ),
@@ -904,7 +1003,8 @@ class RoomsList extends \Elementor\Widget_Base
 						'icon' => 'eicon-text-align-right',
 					],
 				],
-				'default' => 'left',
+				'desktop_default' => 'left',
+				'mobile_default' => 'left',
 				'selectors' => [
 					'.rooms .room-card-text-desktop' => 'text-align: {{VALUE}}',
 				],
@@ -921,12 +1021,14 @@ class RoomsList extends \Elementor\Widget_Base
 			]
 		);
 
-        $this->add_control(
+        $this->add_responsive_control(
 			'package_cards_info_price_and_button_justify_content',
 			[
 				'label' => __( 'Price Button Horizontal Align', 'OBPress_RoomsList' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
-				'default' => 'space-between',
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => 'space-between',
+				'mobile_default' => 'space-between',
 				'options' => [
 					'space-between'  => __( 'Space Between', 'OBPress_RoomsList' ),
 					'space-around'  => __( 'Space Around', 'OBPress_RoomsList' ),
@@ -941,12 +1043,14 @@ class RoomsList extends \Elementor\Widget_Base
 			]
 		);
 
-        $this->add_control(
+        $this->add_responsive_control(
 			'package_cards_info_price_and_button_align_items',
 			[
 				'label' => __( 'Price Button Vertical Align', 'OBPress_RoomsList' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
-				'default' => 'flex-end',
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => 'flex-end',
+				'mobile_default' => 'flex-end',
 				'options' => [
 					'flex-end'  => __( 'Bottom', 'OBPress_RoomsList' ),
 					'flex-start'  => __( 'Top', 'OBPress_RoomsList' ),
@@ -1003,12 +1107,20 @@ class RoomsList extends \Elementor\Widget_Base
 			]
 		);
 
-        $this->add_control(
+        $this->add_responsive_control(
 			'package_cards_info_price_text_margin',
 			[
 				'label' => __( 'Price Text Margin', 'OBPress_RoomsList' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '0',
+					'right' => '0',
+					'bottom' => '5',
+					'left' => '0',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '0',
 					'right' => '0',
 					'bottom' => '5',
@@ -1027,6 +1139,7 @@ class RoomsList extends \Elementor\Widget_Base
 			[
 				'label' => __( 'Price Text Alignment', 'OBPress_RoomsList' ),
 				'type' => \Elementor\Controls_Manager::CHOOSE,
+				'devices' => [ 'desktop', 'mobile' ],
 				'options' => [
 					'left' => [
 						'title' => __( 'Left', 'OBPress_RoomsList' ),
@@ -1041,7 +1154,8 @@ class RoomsList extends \Elementor\Widget_Base
 						'icon' => 'eicon-text-align-right',
 					],
 				],
-				'default' => 'left',
+				'desktop_default' => 'left',
+				'mobile_default' => 'left',
 				'selectors' => [
 					'.rooms .price-text' => 'text-align: {{VALUE}}',
 				],
@@ -1125,12 +1239,20 @@ class RoomsList extends \Elementor\Widget_Base
 			]
 		);
 
-        $this->add_control(
+        $this->add_responsive_control(
 			'package_cards_info_button_padding',
 			[
 				'label' => __( 'Button Padding', 'OBPress_RoomsList' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '11',
+					'right' => '33',
+					'bottom' => '11',
+					'left' => '33',
+					'isLinked' => false
+				],
+				'mobile_default' => [
 					'top' => '11',
 					'right' => '33',
 					'bottom' => '11',
@@ -1144,12 +1266,20 @@ class RoomsList extends \Elementor\Widget_Base
 			]
 		);
 
-        $this->add_control(
+        $this->add_responsive_control(
 			'package_cards_info_button_border_radius',
 			[
 				'label' => __( 'Button Border Radius', 'OBPress_RoomsList' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'default' => [
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '0',
+					'right' => '0',
+					'bottom' => '0',
+					'left' => '0',
+					'isLinked' => true
+				],
+				'mobile_default' => [
 					'top' => '0',
 					'right' => '0',
 					'bottom' => '0',
