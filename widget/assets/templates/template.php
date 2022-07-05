@@ -3,7 +3,7 @@
         <div class="search-and-order">
             <input type="text" id="search-input" placeholder="Search by keyword, hotel or destination" class="btn-ic">
             <button class="obpress-chain-results-button order-button obpress-secundary-btn" data-bs-toggle="modal" data-bs-target="#ordenar">
-                <?php _e('Order', 'OBPressTheme') ?>
+                <?php _e('Order', 'OBPress_RoomsList') ?>
             </button>
         </div>
         <div class="rooms_header_message"><?php _e('Discover', 'OBPress_RoomsList') ?> <?= count($hotels_in_chain) ?> <?php _e('Hilton hotels around the world!', 'OBPress_RoomsList') ?></div> 
