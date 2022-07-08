@@ -14,19 +14,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 3.1\n"
 
-# wpml-name: a240fa27925a635b08dc28c9e4f9216d
-#: <input type="text" id="search-input" placeholder="Search by keyword, hotel
-#: or destination" class="btn-ic"> <button class="obpress-chain-results-button
-#: order-button obpress-secundary-btn" data-bs-toggle="modal"
-#: data-bs-target="#ordenar"> <?php _e('Order', 'OBPress_RoomsList') ?>
-msgid "Order"
-msgstr "Ordenar"
-
-# wpml-name: b3b86bde314cbaa9c97d5444fed3c39b
-msgid "Elementor Test Extension"
-msgstr "Extensión de prueba de Elementor"
-
 # wpml-name: 3a6747ea386dcfbc47359706af91b604
+#: [ 'name' => 'package_cards_ribbon_box_shadow', 'label' esc_html__( 'Ribbon
+#: Box Shadow', 'OBPress_RoomsList' ),
 msgid "Ribbon Box Shadow"
 msgstr "Sombra de caja de cinta"
 
@@ -192,7 +182,7 @@ msgstr "Alineación del nombre del hotel"
 
 # wpml-name: 92b09c7c48c520c3c55e497875da437c
 msgid "Right"
-msgstr "Derecha"
+msgstr "Derecho"
 
 # wpml-name: 4f1f6016fc9f3f2353c0cc7c67b292bd
 msgid "Center"
@@ -200,7 +190,7 @@ msgstr "Centro"
 
 # wpml-name: 945d5e233cf7d6240f6b783b36a374ff
 msgid "Left"
-msgstr "Izquierda"
+msgstr "Izquierdo"
 
 # wpml-name: e77954292fcdffa5bb7a3ae585910097
 msgid "Room Name Alignment"
@@ -306,10 +296,6 @@ msgstr "Ancho de la habitación"
 msgid "Package Main Style Section"
 msgstr "Sección de estilo principal del paquete"
 
-# wpml-name: 1c0924238fa84a3894c2b3729cca8a74
-msgid "Rooms List"
-msgstr "Lista de habitaciones"
-
 # wpml-name: e576c23d915755d83e2d1f47bd9f6c22
 msgid "No results found"
 msgstr "No se han encontrado resultados"
@@ -337,6 +323,26 @@ msgstr "Por carpeta (predeterminado)"
 # wpml-name: 785bc8b603d21f69f55e495d7efd6923
 msgid "Order by:"
 msgstr "Ordenar por:"
+
+# wpml-name: a240fa27925a635b08dc28c9e4f9216d
+msgid "Order"
+msgstr "Ordenar"
+
+# wpml-name: bd175f3fcfd91508791e62ef2b5df449
+msgid "Search by keyword, hotel or destination"
+msgstr "Busca por palabra clave, hotel o destino"
+
+# wpml-name: b3b86bde314cbaa9c97d5444fed3c39b
+msgid "Elementor Test Extension"
+msgstr "Extensión de prueba de Elementor"
+
+# wpml-name: 00c4ef7ec52b3ac0365d4c07db6122c7
+msgid "Package Main Image Style"
+msgstr "Estilo de imagen principal del paquete"
+
+# wpml-name: 1c0924238fa84a3894c2b3729cca8a74
+msgid "Rooms List"
+msgstr "Lista de habitaciones"
 
 # wpml-name: b5f883fe768f7acadd4375a36cb0c999
 msgid "No rooms available"

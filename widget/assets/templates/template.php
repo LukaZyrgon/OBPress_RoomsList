@@ -1,7 +1,7 @@
 <div class="rooms">
     <?php if($rooms != null): ?>
         <div class="search-and-order">
-            <input type="text" id="search-input" placeholder="Search by keyword, hotel or destination" class="btn-ic">
+            <input type="text" id="search-input" placeholder="<?php _e('Search by keyword, hotel or destination', 'OBPress_RoomsList') ?>" class="btn-ic">
             <button class="obpress-chain-results-button order-button obpress-secundary-btn" data-bs-toggle="modal" data-bs-target="#ordenar">
                 <?php _e('Order', 'OBPress_RoomsList') ?>
             </button>

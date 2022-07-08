@@ -10,20 +10,12 @@ msgstr ""
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language:fr\n"
+"Language:es\n"
 "MIME-Version: 1.0\n"
 
-#: <input type="text" id="search-input" placeholder="Search by keyword, hotel or destination" class="btn-ic">
-#: <button class="obpress-chain-results-button order-button obpress-secundary-btn" data-bs-toggle="modal" data-bs-target="#ordenar">
-#: <?php _e('Order', 'OBPress_RoomsList') ?>
-# wpml-name: a240fa27925a635b08dc28c9e4f9216d
-msgid "Order"
-msgstr ""
-
-# wpml-name: b3b86bde314cbaa9c97d5444fed3c39b
-msgid "Elementor Test Extension"
-msgstr ""
-
+#: [
+#: 'name' => 'package_cards_ribbon_box_shadow',
+#: 'label' => esc_html__( 'Ribbon Box Shadow', 'OBPress_RoomsList' ),
 # wpml-name: 3a6747ea386dcfbc47359706af91b604
 msgid "Ribbon Box Shadow"
 msgstr ""
@@ -304,10 +296,6 @@ msgstr ""
 msgid "Package Main Style Section"
 msgstr ""
 
-# wpml-name: 1c0924238fa84a3894c2b3729cca8a74
-msgid "Rooms List"
-msgstr ""
-
 # wpml-name: e576c23d915755d83e2d1f47bd9f6c22
 msgid "No results found"
 msgstr ""
@@ -334,6 +322,26 @@ msgstr ""
 
 # wpml-name: 785bc8b603d21f69f55e495d7efd6923
 msgid "Order by:"
+msgstr ""
+
+# wpml-name: a240fa27925a635b08dc28c9e4f9216d
+msgid "Order"
+msgstr ""
+
+# wpml-name: bd175f3fcfd91508791e62ef2b5df449
+msgid "Search by keyword, hotel or destination"
+msgstr ""
+
+# wpml-name: b3b86bde314cbaa9c97d5444fed3c39b
+msgid "Elementor Test Extension"
+msgstr ""
+
+# wpml-name: 00c4ef7ec52b3ac0365d4c07db6122c7
+msgid "Package Main Image Style"
+msgstr ""
+
+# wpml-name: 1c0924238fa84a3894c2b3729cca8a74
+msgid "Rooms List"
 msgstr ""
 
 # wpml-name: b5f883fe768f7acadd4375a36cb0c999
