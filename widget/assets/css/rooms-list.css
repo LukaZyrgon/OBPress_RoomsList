@@ -119,6 +119,10 @@ body {
   display: block;
 }
 
+.room-card-title:hover {
+  text-decoration: underline;
+}
+
 .room-card-hotel-name {
   font-size: 14px;
   font-weight: bold;
@@ -185,7 +189,8 @@ body {
 }
 
 .room-button:hover {
-  color: #ffffff;
+  color: #191919;
+  background-color: #fff;
 }
 
 .room-card-best-price {
@@ -246,17 +251,37 @@ body {
 .search-and-order {
   text-align: center;
   padding: 42px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #search-input {
-  padding: 10px;
+  padding: 10px 30px 10px 10px;
   width: 500px;
   height: 40px;
+  background-image: url(../icons/icon_Search.svg);
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 7px);
+  background-position-y: center;
+  border-width: 1px;
+  min-width: unset;
+  background-origin: unset;
+  transition: 0.3s;
 }
 
-#search-input:focus, #search-input:active {
+#search-input:hover {
+  outline: 1px solid #000;
+}
+
+#search-input:focus {
   box-shadow: none !important;
-  outline: none !important;
+  outline: 1px solid #000;
+}
+
+#search-input:active {
+  box-shadow: none !important;
+  outline: 1px solid #000;
 }
 
 #ordenar {
@@ -271,13 +296,31 @@ body {
   font-size: 13px;
   font-weight: bold;
   margin-left: 15px;
-  background-repeat: no-repeat;
-  background-position: 17px center;
-  padding-left: 33px;
-  background-image: url('../icons/order.svg');
-  background-position: 13px center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
-  top: -2px;
+  transition: 0.3s;
+  background-image: unset;
+  padding: 0px;
+  top: unset;
+}
+
+.obpress-chain-results-button svg {
+  margin-right: 18px;
+}
+
+.obpress-chain-results-button:hover { 
+  color: #fff;
+  background-color: #191919;
+}
+
+.obpress-chain-results-button:hover line {
+  stroke: #fff;
+}
+
+.obpress-chain-results-button:hover path {
+  fill: #fff;
 }
 
 #ordenar .modal-dialog {

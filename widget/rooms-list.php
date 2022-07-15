@@ -43,6 +43,327 @@ class RoomsList extends \Elementor\Widget_Base
 	
 	protected function _register_controls()
 	{
+		$this->start_controls_section(
+			'search_input_and_order_button_section',
+			[
+				'label' => __('Search And Order Button Style', 'OBPress_SpecialOffersList'),
+				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		$this->add_responsive_control(
+			'obpress_packages_search_order_align',
+			[
+				'label' => __( 'Search and Order Vertical Align', 'OBPress_SpecialOffersList' ),
+				'type' => \Elementor\Controls_Manager::SELECT,
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => 'center',
+				'mobile_default' => 'center',
+				'options' => [
+					'left'  => __( 'Left', 'OBPress_SpecialOffersList' ),
+					'center'  => __( 'Center', 'OBPress_SpecialOffersList' ),
+					'right'  => __( 'Right', 'OBPress_SpecialOffersList' ),
+				],
+				'selectors' => [
+					'.rooms .search-and-order' => 'justify-content: {{obpress_packages_search_order_align}}'
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'obpress_search_input_width',
+			[
+				'label' => __( 'Search Input Width', 'OBPress_SpecialOffersList' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'size' => 500,
+					'unit' => 'px',
+				],
+				'mobile_default' => [
+					'size' => 100,
+					'unit' => '%',
+				],
+				'range' => [
+					'px' => [
+						'max' => 1000,
+						'step' => 1,
+					],
+					'%' => [
+						'max' => 100,
+						'step' => 1,
+					],
+				],
+				'render_type' => 'ui',
+				'selectors' => [
+					'.rooms #search-input' => 'width: {{SIZE}}{{UNIT}}',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'obpress_search_input_height',
+			[
+				'label' => __( 'Search Input Height', 'OBPress_SpecialOffersList' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'size' => 40,
+				],
+				'mobile_default' => [
+					'size' => 40,
+				],
+				'range' => [
+					'px' => [
+						'max' => 100,
+						'min' => 10,
+						'step' => 1,
+					]
+				],
+				'render_type' => 'ui',
+				'selectors' => [
+					'.rooms #search-input' => 'height: {{SIZE}}px',
+				],
+			]
+		);
+
+		$this->add_control(
+			'obpress_search_input_bg_color',
+			[
+				'label' => __('Search Input Bg Color', 'OBPress_SpecialOffersList'),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'input_type' => 'color',
+				'default' => '#fff',
+				'selectors' => [
+					'.rooms #search-input' => 'background-color: {{obpress_search_input_bg_color}}'
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'obpress_search_input_padding',
+			[
+				'label' => __( 'Search Input Padding', 'OBPress_SpecialOffersList' ),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '10',
+					'right' => '30',
+					'bottom' => '10',
+					'left' => '10',
+					'isLinked' => false
+				],
+				'mobile_default' => [
+					'top' => '10',
+					'right' => '30',
+					'bottom' => '10',
+					'left' => '10',
+					'isLinked' => false
+				],
+				'size_units' => [ 'px', '%', 'em' ],
+				'selectors' => [
+					'.rooms #search-input' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'obpress_order_button_margin',
+			[
+				'label' => __( 'Order Btn Margin', 'OBPress_SpecialOffersList' ),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'top' => '0',
+					'right' => '0',
+					'bottom' => '0',
+					'left' => '15',
+					'isLinked' => false
+				],
+				'mobile_default' => [
+					'top' => '0',
+					'right' => '0',
+					'bottom' => '0',
+					'left' => '15',
+					'isLinked' => false
+				],
+				'size_units' => [ 'px', '%', 'em' ],
+				'selectors' => [
+					'.rooms .obpress-chain-results-button' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_control(
+			'obpress_order_button_bg_color',
+			[
+				'label' => __('Order Btn Bg Color', 'OBPress_SpecialOffersList'),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'input_type' => 'color',
+				'default' => '#fff',
+				'selectors' => [
+					'.rooms .obpress-chain-results-button' => 'background-color: {{obpress_order_button_bg_color}}'
+				],
+			]
+		);
+
+		$this->add_control(
+			'obpress_order_button_hover_bg_color',
+			[
+				'label' => __('Order Btn Hover Bg Color', 'OBPress_SpecialOffersList'),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'input_type' => 'color',
+				'default' => '#191919',
+				'selectors' => [
+					'.rooms .obpress-chain-results-button:hover' => 'background-color: {{obpress_order_button_hover_bg_color}}'
+				],
+			]
+		);
+
+		$this->add_group_control(
+			\Elementor\Group_Control_Border::get_type(),
+			[
+				'name' => 'obpress_order_button_border',
+				'label' => __( 'Order Btn Border', 'OBPress_SpecialOffersList' ),
+				'fields_options' => [
+					'border' => [
+						'default' => 'solid',
+					],
+					'width' => [
+						'default' => [
+							'top' => '1',
+							'right' => '1',
+							'bottom' => '1',
+							'left' => '1',
+							'isLinked' => true,
+						],
+					],
+					'color' => [
+						'default' => '#191919',
+					],
+				],
+				'selector' => '.rooms .obpress-chain-results-button',
+			]
+		);
+
+		$this->add_control(
+			'obpress_order_button_border_hover_color',
+			[
+				'label' => __('Order Btn Hover Border Color', 'OBPress_SpecialOffersList'),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'input_type' => 'color',
+				'default' => '#191919',
+				'selectors' => [
+					'.rooms .obpress-chain-results-button:hover' => 'border-color: {{obpress_order_button_border_hover_color}}'
+				],
+			]
+		);
+
+		$this->add_control(
+			'obpress_order_button_color',
+			[
+				'label' => __('Order Btn Color', 'OBPress_SpecialOffersList'),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'input_type' => 'color',
+				'default' => '#191919',
+				'selectors' => [
+					'.rooms .obpress-chain-results-button' => 'color: {{obpress_order_button_color}}',
+					'.rooms .obpress-chain-results-button path' => 'fill: {{obpress_order_button_color}}',
+					'.rooms .obpress-chain-results-button  line' => 'stroke: {{obpress_order_button_color}}'
+				],
+			]
+		);
+
+		$this->add_control(
+			'obpress_order_button_hover_color',
+			[
+				'label' => __('Order Btn Hover Color', 'OBPress_SpecialOffersList'),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'input_type' => 'color',
+				'default' => '#fff',
+				'selectors' => [
+					'.rooms .obpress-chain-results-button:hover' => 'color: {{obpress_order_button_color}}',
+					'.rooms .obpress-chain-results-button:hover path' => 'fill: {{obpress_order_button_color}}',
+					'.rooms .obpress-chain-results-button:hover line' => 'stroke: {{obpress_order_button_color}}'
+				],
+			]
+		);
+
+		$this->add_control(
+			'obpress_order_button_hover_Transition',
+			[
+				'label' => __( 'Order Transition Duration', 'OBPress_SpecialOffersList' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'default' => [
+					'size' => 0.3,
+				],
+				'range' => [
+					'px' => [
+						'max' => 3,
+						'step' => 0.1,
+					],
+				],
+				'render_type' => 'ui',
+				'selectors' => [
+					'.rooms .obpress-chain-results-button, .rooms .obpress-chain-results-button path, .rooms .obpress-chain-results-button  line' => 'transition-duration: {{SIZE}}s',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'obpress_order_button_width',
+			[
+				'label' => __( 'Order Btn Width', 'OBPress_SpecialOffersList' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'size' => 138,
+				],
+				'mobile_default' => [
+					'size' => 138,
+				],
+				'range' => [
+					'px' => [
+						'max' => 500,
+						'min' => 10,
+						'step' => 1,
+					]
+				],
+				'render_type' => 'ui',
+				'selectors' => [
+					'.rooms .obpress-chain-results-button' => 'min-width: {{SIZE}}px',
+				],
+			]
+		);
+
+		$this->add_responsive_control(
+			'obpress_order_button_height',
+			[
+				'label' => __( 'Order Btn Height', 'OBPress_SpecialOffersList' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'devices' => [ 'desktop', 'mobile' ],
+				'desktop_default' => [
+					'size' => 40,
+				],
+				'mobile_default' => [
+					'size' => 40,
+				],
+				'range' => [
+					'px' => [
+						'max' => 100,
+						'min' => 10,
+						'step' => 1,
+					]
+				],
+				'render_type' => 'ui',
+				'selectors' => [
+					'.rooms .obpress-chain-results-button' => 'height: {{SIZE}}px',
+				],
+			]
+		);
+
+		$this->end_controls_section();
+
         $this->start_controls_section(
 			'package_main_section',
 			[
@@ -539,7 +860,7 @@ class RoomsList extends \Elementor\Widget_Base
         $this->start_controls_section(
 			'package_cards_info_section',
 			[
-				'label' => __('Package Cards Style', 'OBPress_RoomsList'),
+				'label' => __('Package Cards Info Part Style', 'OBPress_RoomsList'),
 				'tab' => \Elementor\Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -1299,7 +1620,7 @@ class RoomsList extends \Elementor\Widget_Base
 				'label' => __('Button Background Color', 'OBPress_RoomsList'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'input_type' => 'color',
-				'default' => '#000',
+				'default' => '#191919',
 				'selectors' => [
 					'.rooms .room-button' => 'background-color: {{package_cards_info_button_bg_color}}'
 				],
@@ -1315,6 +1636,45 @@ class RoomsList extends \Elementor\Widget_Base
 				'default' => '#fff',
 				'selectors' => [
 					'.rooms .room-button' => 'color: {{package_cards_info_button_color}}'
+				],
+			]
+		);
+
+		$this->add_group_control(
+			\Elementor\Group_Control_Border::get_type(),
+			[
+				'name' => 'package_cards_info_button_border',
+				'label' => __( 'Order Btn Border', 'OBPress_SpecialOffersList' ),
+				'fields_options' => [
+					'border' => [
+						'default' => 'solid',
+					],
+					'width' => [
+						'default' => [
+							'top' => '1',
+							'right' => '1',
+							'bottom' => '1',
+							'left' => '1',
+							'isLinked' => true,
+						],
+					],
+					'color' => [
+						'default' => '#191919',
+					],
+				],
+				'selector' => '.rooms .room-button',
+			]
+		);
+
+		$this->add_control(
+			'package_cards_info_button_border_hover_color',
+			[
+				'label' => __('Button Border Hover Color', 'OBPress_RoomsList'),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'input_type' => 'color',
+				'default' => '#191919',
+				'selectors' => [
+					'.rooms .room-button' => 'border-color: {{package_cards_info_button_border_hover_color}}'
 				],
 			]
 		);
@@ -1357,7 +1717,7 @@ class RoomsList extends \Elementor\Widget_Base
 				'label' => __('Button Hover Background Color', 'OBPress_RoomsList'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'input_type' => 'color',
-				'default' => '#000',
+				'default' => '#fff',
 				'selectors' => [
 					'.rooms .room-button:hover' => 'background-color: {{package_cards_info_button_bg_hover_color}}'
 				],
@@ -1370,7 +1730,7 @@ class RoomsList extends \Elementor\Widget_Base
 				'label' => __('Button Hover Color', 'OBPress_RoomsList'),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'input_type' => 'color',
-				'default' => '#fff',
+				'default' => '#191919',
 				'selectors' => [
 					'.rooms .room-button:hover' => 'color: {{package_cards_info_button_hover_color}}'
 				],
