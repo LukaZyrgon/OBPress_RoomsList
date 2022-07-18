@@ -268,20 +268,36 @@ body {
   min-width: unset;
   background-origin: unset;
   transition: 0.3s;
+  border-color: #8c99af;
 }
 
 #search-input:hover {
-  outline: 1px solid #000;
+  border: 1px solid #191919;
+}
+
+#search-input:hover::placeholder {
+  color: #191919;
+  opacity: 1;
+}
+
+#search-input:hover:-ms-input-placeholder {
+  color: #191919;
+}
+
+#search-input:hover::-ms-input-placeholder {
+  color: #191919;
 }
 
 #search-input:focus {
   box-shadow: none !important;
-  outline: 1px solid #000;
+  border: 1px solid #191919;
+  outline: none;
 }
 
 #search-input:active {
   box-shadow: none !important;
-  outline: 1px solid #000;
+  border: 1px solid #191919;
+  outline: none;
 }
 
 #ordenar {
