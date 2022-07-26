@@ -459,16 +459,16 @@ class RoomsList extends \Elementor\Widget_Base
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => [
-					'top' => '20',
+					'top' => '0',
 					'right' => '0',
-					'bottom' => '25',
+					'bottom' => '20',
 					'left' => '0',
 					'isLinked' => false
 				],
 				'mobile_default' => [
-					'top' => '20',
+					'top' => '0',
 					'right' => '0',
-					'bottom' => '25',
+					'bottom' => '20',
 					'left' => '0',
 					'isLinked' => false
 				],
@@ -525,14 +525,14 @@ class RoomsList extends \Elementor\Widget_Base
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => [
-					'top' => '50',
+					'top' => '0',
 					'right' => '0',
 					'bottom' => '0',
 					'left' => '0',
 					'isLinked' => false
 				],
 				'mobile_default' => [
-					'top' => '50',
+					'top' => '0',
 					'right' => '0',
 					'bottom' => '0',
 					'left' => '0',
@@ -885,17 +885,17 @@ class RoomsList extends \Elementor\Widget_Base
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => [
-					'top' => '19',
-					'right' => '27',
-					'bottom' => '22',
-					'left' => '23',
+					'top' => '20',
+					'right' => '20',
+					'bottom' => '20',
+					'left' => '20',
 					'isLinked' => false
 				],
 				'mobile_default' => [
-					'top' => '19',
-					'right' => '27',
-					'bottom' => '22',
-					'left' => '23',
+					'top' => '20',
+					'right' => '20',
+					'bottom' => '20',
+					'left' => '20',
 					'isLinked' => false
 				],
 				'size_units' => [ 'px', '%', 'em' ],
@@ -959,14 +959,14 @@ class RoomsList extends \Elementor\Widget_Base
 				'desktop_default' => [
 					'top' => '0',
 					'right' => '0',
-					'bottom' => '12',
+					'bottom' => '10',
 					'left' => '0',
 					'isLinked' => false
 				],
 				'mobile_default' => [
 					'top' => '0',
 					'right' => '0',
-					'bottom' => '12',
+					'bottom' => '10',
 					'left' => '0',
 					'isLinked' => false
 				],
@@ -1059,14 +1059,14 @@ class RoomsList extends \Elementor\Widget_Base
 				'desktop_default' => [
 					'top' => '0',
 					'right' => '0',
-					'bottom' => '12',
+					'bottom' => '10',
 					'left' => '0',
 					'isLinked' => false
 				],
 				'mobile_default' => [
 					'top' => '0',
 					'right' => '0',
-					'bottom' => '12',
+					'bottom' => '10',
 					'left' => '0',
 					'isLinked' => false
 				],
@@ -1214,14 +1214,14 @@ class RoomsList extends \Elementor\Widget_Base
 				'desktop_default' => [
 					'top' => '0',
 					'right' => '0',
-					'bottom' => '18',
+					'bottom' => '15',
 					'left' => '0',
 					'isLinked' => false
 				],
 				'mobile_default' => [
 					'top' => '0',
 					'right' => '0',
-					'bottom' => '18',
+					'bottom' => '15',
 					'left' => '0',
 					'isLinked' => false
 				],
@@ -1284,14 +1284,14 @@ class RoomsList extends \Elementor\Widget_Base
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'devices' => [ 'desktop', 'mobile' ],
 				'desktop_default' => [
-					'top' => '18',
+					'top' => '15',
 					'right' => '0',
 					'bottom' => '18',
 					'left' => '0',
 					'isLinked' => false
 				],
 				'mobile_default' => [
-					'top' => '18',
+					'top' => '15',
 					'right' => '0',
 					'bottom' => '18',
 					'left' => '0',
